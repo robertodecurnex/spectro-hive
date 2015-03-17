@@ -2,6 +2,6 @@ language: ruby
 rvm:
   - ruby-head
   - 2.2.1
-#addons:
-#  code_climate:
-#    repo_token: TOKENNNN
+addons:
+  code_climate:
+    repo_token: a5df6fb380b96f4cdf9fbd8b484495b0ad1bda8c7eef698e147172c64fe67ef3
