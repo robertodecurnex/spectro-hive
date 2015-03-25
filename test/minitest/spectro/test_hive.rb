@@ -1,6 +1,6 @@
 class TestSpectro < Minitest::Test
 
-  class TestServer < Minitest::Test
+  class TestHive < Minitest::Test
   end
 
 end

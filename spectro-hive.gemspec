@@ -4,9 +4,9 @@ Gem::Specification.new do |s|
   s.authors = ['Roberto Decurnex']
   s.date = '2015-01-13' 
   s.email = 'decurnex.roberto@gmail.com'
-  s.homepage = 'http://github.com/robertodecurnex/spectro-server'
+  s.homepage = 'http://github.com/robertodecurnex/spectro-hive'
   s.license = 'MIT'
-  s.name = 'spectro-server'
+  s.name = 'spectro-hive'
   s.summary = 'Spectro HTTP server'
   s.version = '0.1'
   

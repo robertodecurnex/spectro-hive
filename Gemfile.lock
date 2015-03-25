@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    spectro-server (0.1)
+    spectro-hive (0.1)
       puma
       rack
       spectro
@@ -76,5 +76,5 @@ DEPENDENCIES
   guard-rake
   minitest
   rake
-  spectro-server!
+  spectro-hive!
   yard

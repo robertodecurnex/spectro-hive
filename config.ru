@@ -1,8 +1,8 @@
-require 'spectro/server'
+require 'spectro/hive'
 
 use Rack::Static, 
   index: 'index.html',
   root: 'public',
   urls: ['/favicon.ico', '/images']
 
-run Spectro::Server.new
+run Spectro::Hive.new
