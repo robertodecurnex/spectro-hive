@@ -1,7 +1,19 @@
 language: ruby
 rvm:
-  - ruby-head
   - 2.2.1
 addons:
   code_climate:
     repo_token: eb1ba626b01ab22570de66db98c0c23c637e09c2b257c4ccfb67e48fea0012f6
+before_install:
+  - gem update --system
+  - gem --version
+  - gem install bundler
+  - bundle --version
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/67d24e680b4c837ae740
+    on_success: change
+    on_failure: always
+    on_start: never
+
