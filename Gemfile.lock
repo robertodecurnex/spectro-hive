@@ -5,6 +5,7 @@ PATH
       mongo
       puma
       rack
+      rake
       spectro
 
 GEM
@@ -72,7 +73,6 @@ DEPENDENCIES
   guard
   guard-rake
   minitest
-  rake
   spectro-hive!
   yard
 
