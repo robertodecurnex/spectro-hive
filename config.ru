@@ -1,6 +1,6 @@
 require 'spectro/hive'
 
-use Rack::Static, 
+use Rack::Static,
   index: 'index.html',
   root: 'public',
   urls: ['/favicon.ico', '/images']
