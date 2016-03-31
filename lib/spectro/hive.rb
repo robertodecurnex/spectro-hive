@@ -15,7 +15,7 @@ module Spectro
             mongo_client = Mongo::Client.new(ENV['MONGODB'] || 'mongodb://127.0.0.1:27017/spectro')
 
             specs = YAML.load(request.body.read).values.flatten.collect do |spec|
-              mongo_client[:specs].update_one({md5: spec.md5}, {md5: spec.md5, yaml: YAML.dump(spec)})
+              mongo_client[:specs].update_one({md5: spec.md5}, {yaml: YAML.dump(spec)}, {upsert: true})
             end
           elsif request.get?
             mongo_client = Mongo::Client.new(ENV['MONGODB'] || 'mongodb://127.0.0.1:27017/spectro')
