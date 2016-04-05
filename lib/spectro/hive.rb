@@ -25,7 +25,7 @@ module Spectro
               '200',
               {
                 'Content-Type' => 'application/javascript',
-                'Access-Control-Allow-Origin' => 'http://localhost:3000'
+                'Access-Control-Allow-Origin' => 'http://spectrorb.herokuapp.com'
               },
               [
                 {
