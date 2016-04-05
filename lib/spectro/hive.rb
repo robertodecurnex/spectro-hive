@@ -10,19 +10,29 @@ module Spectro
       request = Rack::Request.new(env)
 
       if request.path.match /^\/api\//
-        if request.path == '/api/specs'
+        mongo_client = Mongo::Client.new(ENV['MONGODB'] || 'mongodb://127.0.0.1:27017/spectro')
+        if request.path =~ /^\/api\/specs(.json)?$/
           if request.post?
-            mongo_client = Mongo::Client.new(ENV['MONGODB'] || 'mongodb://127.0.0.1:27017/spectro')
-
             specs = YAML.load(request.body.read).values.flatten.collect do |spec|
-              mongo_client[:specs].update_one({md5: spec.md5}, {yaml: YAML.dump(spec)}, {upsert: true})
+              results = mongo_client[:specs].update_one({md5: spec.md5}, {md5: spec.md5, yaml: YAML.dump(spec)}, {upsert: true})
             end
           elsif request.get?
-            mongo_client = Mongo::Client.new(ENV['MONGODB'] || 'mongodb://127.0.0.1:27017/spectro')
+            specs = mongo_client[:specs].find.to_a.collect do |spec|
+              YAML.load(spec['yaml'])
+            end
 
-            specs = mongo_client[:specs].find.to_a
-
-            return ['200', {'Content-Type' => 'text/html'}, [specs.to_json]]
+            return [
+              '200',
+              {
+                'Content-Type' => 'application/javascript',
+                'Access-Control-Allow-Origin' => 'http://localhost:3000'
+              },
+              [
+                {
+                  data: specs.collect(&:to_hash)
+                }.to_json
+              ]
+            ]
           end
         end
 

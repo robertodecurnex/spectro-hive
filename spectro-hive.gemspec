@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'codeclimate-test-reporter'
   s.add_development_dependency 'guard'
+  s.add_development_dependency 'guard-rack'
   s.add_development_dependency 'guard-rake'
   s.add_development_dependency 'minitest'
   s.add_development_dependency 'yard'
