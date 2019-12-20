@@ -17,7 +17,7 @@ GEM
     coderay (1.1.1)
     colorize (0.7.7)
     docile (1.1.5)
-    ffi (1.9.10)
+    ffi (1.11.3)
     formatador (0.2.5)
     guard (2.13.0)
       formatador (>= 0.2.4)
