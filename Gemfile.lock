@@ -12,8 +12,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     bson (4.0.4)
-    codeclimate-test-reporter (0.5.0)
-      simplecov (>= 0.7.1, < 1.0.0)
+    codeclimate-test-reporter (1.0.9)
+      simplecov (<= 0.13)
     coderay (1.1.1)
     colorize (0.7.7)
     docile (1.1.5)
@@ -35,7 +35,7 @@ GEM
     guard-rake (1.0.0)
       guard
       rake
-    json (1.8.3)
+    json (2.3.0)
     listen (3.0.6)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
@@ -59,11 +59,11 @@ GEM
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     shellany (0.0.1)
-    simplecov (0.11.2)
+    simplecov (0.13.0)
       docile (~> 1.1.0)
-      json (~> 1.8)
+      json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
-    simplecov-html (0.10.0)
+    simplecov-html (0.10.2)
     slop (3.6.0)
     spectro (0.3)
       colorize
