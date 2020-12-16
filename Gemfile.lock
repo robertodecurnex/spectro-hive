@@ -16,7 +16,7 @@ GEM
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.1)
     colorize (0.7.7)
-    docile (1.1.5)
+    docile (1.3.2)
     ffi (1.11.3)
     formatador (0.2.5)
     guard (2.13.0)
@@ -35,7 +35,7 @@ GEM
     guard-rake (1.0.0)
       guard
       rake
-    json (1.8.3)
+    json (2.4.0)
     listen (3.0.6)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
@@ -59,11 +59,11 @@ GEM
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     shellany (0.0.1)
-    simplecov (0.11.2)
-      docile (~> 1.1.0)
-      json (~> 1.8)
+    simplecov (0.17.1)
+      docile (~> 1.1)
+      json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
-    simplecov-html (0.10.0)
+    simplecov-html (0.10.2)
     slop (3.6.0)
     spectro (0.3)
       colorize
